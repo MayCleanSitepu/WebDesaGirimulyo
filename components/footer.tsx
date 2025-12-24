@@ -47,13 +47,13 @@ export function Footer() {
           {/* Tim KKN */}
           <div>
             <h3 className="font-semibold text-lg mb-4">Tim KKN</h3>
-            <p className="text-sm mb-2">Website ini dibuat oleh Tim KKN Universitas Negeri Semarang 2024</p>
+            <p className="text-sm mb-2">Website ini dibuat oleh Tim KKN Universitas Gadjah Mada 2025</p>
             <p className="text-sm text-muted-foreground">Dalam rangka pengabdian masyarakat dan pengembangan desa</p>
           </div>
         </div>
 
         <div className="border-t border-border mt-8 pt-6 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Desa Windusari. Hak Cipta Dilindungi.</p>
+          <p>&copy; {new Date().getFullYear()} Desa Girimulyo. Hak Cipta Dilindungi.</p>
         </div>
       </div>
     </footer>

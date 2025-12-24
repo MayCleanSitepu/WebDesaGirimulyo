@@ -46,7 +46,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Tentang Desa Windusari</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Tentang Desa Girimulyo</h2>
           <div className="h-1 w-20 bg-primary mx-auto rounded-full" />
         </div>
         <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -89,7 +89,7 @@ export default function HomePage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Produk Andalan Desa</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Berbagai produk unggulan dari hasil pertanian dan UMKM masyarakat Desa Windusari
+              Berbagai produk unggulan dari hasil pertanian dan UMKM masyarakat Desa Girimulyo
             </p>
           </div>
 
@@ -158,7 +158,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  Aneka makanan ringan dan kudapan tradisional khas Desa Windusari yang lezat.
+                  Aneka makanan ringan dan kudapan tradisional khas Desa Girimulyo yang lezat.
                 </p>
               </CardContent>
             </Card>
@@ -180,7 +180,7 @@ export default function HomePage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Kegiatan Desa</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Berbagai program dan kegiatan yang dilaksanakan di Desa Windusari
+              Berbagai program dan kegiatan yang dilaksanakan di Desa Girimulyo
             </p>
           </div>
 
@@ -240,9 +240,9 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-8">
               <MapPinned className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Peta Desa Windusari</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Peta Desa Girimulyo</h2>
               <p className="text-muted-foreground">
-                Jelajahi peta interaktif Desa Windusari untuk melihat batas wilayah, potensi desa, dan informasi
+                Jelajahi peta interaktif Desa Girimulyo untuk melihat batas wilayah, potensi desa, dan informasi
                 geografis lainnya
               </p>
             </div>

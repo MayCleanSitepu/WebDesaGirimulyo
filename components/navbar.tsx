@@ -8,12 +8,12 @@ import { cn } from "@/lib/utils"
 import Image from "next/image"
 
 const navItems = [
-  { href: "/", label: "Beranda" },
-  { href: "/profil", label: "Profil Desa" },
-  { href: "/produk", label: "Produk Andalan" },
+  { href: "/profil", label: "Profil" },
+  { href: "/produk", label: "Produk" },
   { href: "/booklet", label: "Booklet" },
-  { href: "/peta", label: "Story Maps" },
+  { href: "/peta", label: "Peta" },
   { href: "/kegiatan", label: "Kegiatan" },
+  { href: "/kandang interaktif", label: "Kandang Interaktif" },
 ]
 
 export function Navbar() {
@@ -39,7 +39,7 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <Image src="/logo-ugm.png" alt="UGM Logo" width={40} height={40} />
-            <span className="font-semibold text-lg text-foreground hidden sm:inline">KKN UGM 2025 x Desa Girimulyo</span>
+            <span className="font-semibold text-sm sm:text-lg text-gray-900 dark:text-gray-100">KKN UGM x Desa Girimulyo</span>
           </Link>
 
           {/* Desktop Navigation */}
