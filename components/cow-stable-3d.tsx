@@ -20,7 +20,7 @@ export function CowStable3D() {
   const [isDragging, setIsDragging] = useState(false)
   const [lastMousePos, setLastMousePos] = useState({ x: 0, y: 0 })
   const [selectedHotspot, setSelectedHotspot] = useState<HotspotData | null>(null)
-  const animationFrameRef = useRef<number>()
+  const animationFrameRef = useRef<number | undefined>(undefined)
 
   const hotspots: HotspotData[] = [
     { x: 0.3, y: 0.4, label: "Tempat Pakan", description: "Area pemberian pakan dengan sistem otomatis", color: "#3b82f6" },
