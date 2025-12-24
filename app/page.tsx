@@ -17,10 +17,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-balance">
-          Website Resmi Desa Windusari
+          Website Resmi Desa Girimulyo
         </h1>
         <p className="text-lg md:text-xl mb-8 text-primary-foreground/90 text-pretty">
-          Informasi, Potensi, dan Kegiatan Desa Windusari
+          Informasi, Potensi, dan Kegiatan Desa Girimulyo
         </p>
         <div className="flex flex-wrap gap-4">
           <Button size="lg" variant="secondary" asChild>
@@ -53,7 +53,7 @@ export default function HomePage() {
           <div className="relative">
             <Image 
           src="/splash.jpg" 
-          alt="Desa Windusari - Traditional Indonesian Village" 
+          alt="Desa Girimulyo - Traditional Indonesian Village" 
           width={600}
           height={400}
           className="rounded-lg shadow-lg w-full object-cover"
@@ -64,11 +64,11 @@ export default function HomePage() {
           </div>
               <div className="space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  Desa Windusari terletak di Kecamatan Windusari, Kabupaten Magelang, Jawa Tengah. Desa kami dikelilingi
+                  Desa Girimulyo terletak di Kecamatan Girimulyo, Kabupaten Magelang, Jawa Tengah. Desa kami dikelilingi
                   oleh pemandangan alam yang indah dengan lahan pertanian yang subur.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Dengan luas wilayah sekitar 450 hektar dan jumlah penduduk lebih dari 3.500 jiwa, Desa Windusari terus
+                  Dengan luas wilayah sekitar 450 hektar dan jumlah penduduk lebih dari 3.500 jiwa, Desa Girimulyo terus
                   berkembang menjadi desa yang mandiri dan sejahtera dengan mengandalkan potensi pertanian dan UMKM
                   lokal.
                 </p>
