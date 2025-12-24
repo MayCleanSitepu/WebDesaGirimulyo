@@ -13,30 +13,30 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative bg-primary text-primary-foreground py-20 md:py-32">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=1920&q=80')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-[url('/splash.jpg')] bg-cover bg-center opacity-20" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-balance">
-              Website Resmi Desa Windusari
-            </h1>
-            <p className="text-lg md:text-xl mb-8 text-primary-foreground/90 text-pretty">
-              Informasi, Potensi, dan Kegiatan Desa Windusari
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" variant="secondary" asChild>
-                <Link href="/profil">
-                  Profil Desa <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                asChild
-                className="bg-primary-foreground/10 border-primary-foreground/20 hover:bg-primary-foreground/20"
-              >
-                <Link href="/produk">Produk Andalan</Link>
-              </Button>
-            </div>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-balance">
+          Website Resmi Desa Windusari
+        </h1>
+        <p className="text-lg md:text-xl mb-8 text-primary-foreground/90 text-pretty">
+          Informasi, Potensi, dan Kegiatan Desa Windusari
+        </p>
+        <div className="flex flex-wrap gap-4">
+          <Button size="lg" variant="secondary" asChild>
+            <Link href="/profil">
+          Profil Desa <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            asChild
+            className="bg-primary-foreground/10 border-primary-foreground/20 hover:bg-primary-foreground/20"
+          >
+            <Link href="/produk">Produk Andalan</Link>
+          </Button>
+        </div>
           </div>
         </div>
       </section>
@@ -45,23 +45,23 @@ export default function HomePage() {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Tentang Desa Windusari</h2>
-              <div className="h-1 w-20 bg-primary mx-auto rounded-full" />
-            </div>
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="relative">
-                <Image 
-                  src="https://images.unsplash.com/photo-1600298881974-6be191ceeda1?w=600&q=80" 
-                  alt="Desa Windusari - Traditional Indonesian Village" 
-                  width={600}
-                  height={400}
-                  className="rounded-lg shadow-lg w-full object-cover"
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyovS/xV/ByXCrr1bwurf6/1oO//9k="
-                  priority
-                />
-              </div>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Tentang Desa Girimulyo</h2>
+          <div className="h-1 w-20 bg-primary mx-auto rounded-full" />
+        </div>
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="relative">
+            <Image 
+          src="/splash.jpg" 
+          alt="Desa Windusari - Traditional Indonesian Village" 
+          width={600}
+          height={400}
+          className="rounded-lg shadow-lg w-full object-cover"
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyovS/xV/ByXCrr1bwurf6/1oO//9k="
+          priority
+            />
+          </div>
               <div className="space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
                   Desa Windusari terletak di Kecamatan Windusari, Kabupaten Magelang, Jawa Tengah. Desa kami dikelilingi
@@ -89,7 +89,7 @@ export default function HomePage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Produk Andalan Desa</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Berbagai produk unggulan dari hasil pertanian dan UMKM masyarakat Desa Windusari
+              Berbagai produk unggulan dari hasil pertanian dan UMKM masyarakat Desa Girimulyo
             </p>
           </div>
 
@@ -158,7 +158,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  Aneka makanan ringan dan kudapan tradisional khas Desa Windusari yang lezat.
+                  Aneka makanan ringan dan kudapan tradisional khas Desa Girimulyo yang lezat.
                 </p>
               </CardContent>
             </Card>
@@ -180,7 +180,7 @@ export default function HomePage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Kegiatan Desa</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Berbagai program dan kegiatan yang dilaksanakan di Desa Windusari
+              Berbagai program dan kegiatan yang dilaksanakan di Desa Girimulyo
             </p>
           </div>
 
@@ -240,9 +240,9 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-8">
               <MapPinned className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Peta Desa Windusari</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Peta Desa Girimulyo</h2>
               <p className="text-muted-foreground">
-                Jelajahi peta interaktif Desa Windusari untuk melihat batas wilayah, potensi desa, dan informasi
+                Jelajahi peta interaktif Desa Girimulyo untuk melihat batas wilayah, potensi desa, dan informasi
                 geografis lainnya
               </p>
             </div>

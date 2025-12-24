@@ -5,14 +5,15 @@ import { Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import Image from "next/image"
 
 const navItems = [
-  { href: "/", label: "Beranda" },
-  { href: "/profil", label: "Profil Desa" },
-  { href: "/produk", label: "Produk Andalan" },
+  { href: "/profil", label: "Profil" },
+  { href: "/produk", label: "Produk" },
   { href: "/booklet", label: "Booklet" },
-  { href: "/peta", label: "Story Maps" },
+  { href: "/peta", label: "Peta" },
   { href: "/kegiatan", label: "Kegiatan" },
+  { href: "/kandang-interaktif", label: "Kandang Interaktif" },
 ]
 
 export function Navbar() {
@@ -37,10 +38,8 @@ export function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">W</span>
-            </div>
-            <span className="font-semibold text-lg text-foreground hidden sm:inline">Desa Windusari</span>
+            <Image src="/logo-ugm.png" alt="UGM Logo" width={40} height={40} />
+            <span className="font-semibold text-sm sm:text-lg text-gray-900 dark:text-gray-100">KKN UGM x Desa Girimulyo</span>
           </Link>
 
           {/* Desktop Navigation */}

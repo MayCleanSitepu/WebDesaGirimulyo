@@ -96,7 +96,7 @@ export default function ProdukPage() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Produk Andalan Desa</h1>
           <p className="text-lg text-primary-foreground/90 max-w-2xl">
-            Berbagai produk unggulan dari hasil pertanian dan UMKM masyarakat Desa Windusari
+            Berbagai produk unggulan dari hasil pertanian dan UMKM masyarakat Desa Girimulyo
           </p>
         </div>
       </section>
@@ -154,7 +154,7 @@ export default function ProdukPage() {
               </div>
               <div className="text-sm">
                 <p className="font-medium">Email:</p>
-                <p className="text-muted-foreground">info@desawindusari.id</p>
+                <p className="text-muted-foreground">info@desa.girimulyo.id</p>
               </div>
             </div>
           </div>

@@ -5,90 +5,12 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Clock, User, Calendar, ArrowRight } from "lucide-react"
 import Image from "next/image"
-
-const booklets = [
-  {
-    id: 1,
-    title: "Panduan Lengkap Budidaya Padi Organik untuk Petani Windusari",
-    slug: "panduan-budidaya-padi-organik",
-    excerpt:
-      "Pelajari teknik dan metode terbaik untuk menghasilkan padi organik berkualitas tinggi. Dari pemilihan bibit hingga panen, panduan lengkap untuk petani desa.",
-    author: "Tim KKN UNNES",
-    date: "18 Desember 2024",
-    readTime: "8 menit",
-    category: "Pertanian",
-    featured: true,
-    image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&q=80",
-  },
-  {
-    id: 2,
-    title: "Strategi Pemasaran Digital untuk UMKM Desa",
-    slug: "strategi-pemasaran-digital-umkm",
-    excerpt:
-      "Tingkatkan penjualan produk UMKM Anda dengan memanfaatkan platform digital. Panduan praktis untuk memulai pemasaran online yang efektif.",
-    author: "Ahmad Rizki",
-    date: "15 Desember 2024",
-    readTime: "6 menit",
-    category: "Ekonomi",
-    featured: true,
-    image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?w=400&q=80",
-  },
-  {
-    id: 3,
-    title: "Sejarah dan Perkembangan Desa Windusari",
-    slug: "sejarah-desa-windusari",
-    excerpt:
-      "Menelusuri perjalanan Desa Windusari dari masa ke masa. Dari desa tradisional hingga menjadi desa modern yang terus berkembang.",
-    author: "Budi Santoso",
-    date: "12 Desember 2024",
-    readTime: "10 menit",
-    category: "Sejarah",
-    featured: false,
-    image: "https://images.unsplash.com/photo-1600298881974-6be191ceeda1?w=400&q=80",
-  },
-  {
-    id: 4,
-    title: "Tips Mengolah Hasil Pertanian Menjadi Produk Bernilai Tinggi",
-    slug: "mengolah-hasil-pertanian",
-    excerpt:
-      "Jangan hanya jual hasil panen mentah! Pelajari cara mengolah hasil pertanian menjadi produk olahan yang lebih menguntungkan.",
-    author: "Siti Nurhaliza",
-    date: "10 Desember 2024",
-    readTime: "7 menit",
-    category: "Pertanian",
-    featured: false,
-    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80",
-  },
-  {
-    id: 5,
-    title: "Pentingnya Menjaga Kebersihan Lingkungan Desa",
-    slug: "kebersihan-lingkungan-desa",
-    excerpt:
-      "Lingkungan bersih adalah kunci kesehatan masyarakat. Mari bersama-sama menjaga kebersihan desa untuk generasi mendatang.",
-    author: "Dr. Ani Wijayanti",
-    date: "8 Desember 2024",
-    readTime: "5 menit",
-    category: "Lingkungan",
-    featured: false,
-    image: "https://images.unsplash.com/photo-1618477462146-c27c6a5b7ae5?w=400&q=80",
-  },
-  {
-    id: 6,
-    title: "Cara Membuat Kerajinan Bambu untuk Pemula",
-    slug: "kerajinan-bambu-pemula",
-    excerpt:
-      "Mulai usaha kerajinan bambu dengan panduan step-by-step untuk pemula. Dari alat yang dibutuhkan hingga teknik dasar pembuatan.",
-    author: "Pak Joko",
-    date: "5 Desember 2024",
-    readTime: "9 menit",
-    category: "UMKM",
-    featured: false,
-    image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&q=80",
-  },
-]
+import Link from "next/link"
+import { getAllArticles, getFeaturedArticles } from "@/lib/articles"
 
 export default function BookletPage() {
-  const featuredBooklets = booklets.filter((b) => b.featured)
+  const booklets = getAllArticles()
+  const featuredBooklets = getFeaturedArticles()
   const regularBooklets = booklets.filter((b) => !b.featured)
 
   return (
@@ -115,7 +37,8 @@ export default function BookletPage() {
 
             <div className="grid md:grid-cols-2 gap-8 mb-16">
               {featuredBooklets.map((booklet) => (
-                <Card key={booklet.id} className="overflow-hidden hover:shadow-xl transition-all group">
+                <Link key={booklet.id} href={`/booklet/${booklet.slug}`}>
+                  <Card className="overflow-hidden hover:shadow-xl transition-all group cursor-pointer h-full">
                   <div className="h-64 bg-muted relative overflow-hidden">
                     <Image
                       src={booklet.image}
@@ -155,6 +78,7 @@ export default function BookletPage() {
                     </Button>
                   </CardContent>
                 </Card>
+              </Link>
               ))}
             </div>
 
@@ -162,7 +86,8 @@ export default function BookletPage() {
             <h2 className="text-2xl font-bold mb-8">Semua Artikel</h2>
             <div className="space-y-6">
               {regularBooklets.map((booklet) => (
-                <Card key={booklet.id} className="overflow-hidden hover:shadow-lg transition-all group">
+                <Link key={booklet.id} href={`/booklet/${booklet.slug}`}>
+                  <Card className="overflow-hidden hover:shadow-lg transition-all group cursor-pointer mb-3">
                   <div className="md:flex">
                     <div className="md:w-80 h-56 md:h-auto bg-muted relative overflow-hidden flex-shrink-0">
                       <Image
@@ -177,7 +102,7 @@ export default function BookletPage() {
                     </div>
                     <div className="flex-1">
                       <CardHeader className="space-y-3">
-                        <Badge className="w-fit">{booklet.category}</Badge>
+                        <Badge className="mt-5 w-fit">{booklet.category}</Badge>
                         <CardTitle className="text-xl md:text-2xl leading-tight group-hover:text-primary transition-colors">
                           {booklet.title}
                         </CardTitle>
@@ -206,6 +131,7 @@ export default function BookletPage() {
                     </div>
                   </div>
                 </Card>
+              </Link>
               ))}
             </div>
           </div>
