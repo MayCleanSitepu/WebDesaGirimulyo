@@ -13,7 +13,7 @@ const navItems = [
   { href: "/booklet", label: "Booklet" },
   { href: "/peta", label: "Peta" },
   { href: "/kegiatan", label: "Kegiatan" },
-  { href: "/kandang interaktif", label: "Kandang Interaktif" },
+  { href: "/kandang-interaktif", label: "Kandang Interaktif" },
 ]
 
 export function Navbar() {
