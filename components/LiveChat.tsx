@@ -16,9 +16,9 @@ export default function LiveChatWidget() {
   const sendMessage = async () => {
     if (!input.trim()) return;
 
-    const newMessages = [
+    const newMessages: Message[] = [
       ...messages,
-      { role: "user", content: input },
+      { role: "user" as const, content: input },
     ];
 
     setMessages(newMessages);
@@ -35,7 +35,7 @@ export default function LiveChatWidget() {
 
     setMessages([
       ...newMessages,
-      { role: "assistant", content: data.reply },
+      { role: "assistant" as const, content: data.reply },
     ]);
 
     setLoading(false);
