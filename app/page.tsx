@@ -211,14 +211,14 @@ export default function HomePage() {
                     <Users className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <CardTitle>Program KKN UNNES</CardTitle>
+                    <CardTitle>Program KKN UGM 2025</CardTitle>
                     <CardDescription>1-31 Desember 2024</CardDescription>
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  Mahasiswa KKN UNNES melaksanakan program pengabdian masyarakat di berbagai bidang.
+                  Mahasiswa KKN UGM 2025 melaksanakan program pengabdian masyarakat di berbagai bidang.
                 </p>
               </CardContent>
             </Card>

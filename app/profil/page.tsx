@@ -11,8 +11,8 @@ export default function ProfilPage() {
       {/* Header */}
       <section className="bg-primary text-primary-foreground py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Profil Desa Windusari</h1>
-          <p className="text-lg text-primary-foreground/90">Mengenal lebih dekat Desa Windusari</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Profil Desa Girimulyo</h1>
+          <p className="text-lg text-primary-foreground/90">Mengenal lebih dekat Desa Girimulyo</p>
         </div>
       </section>
 
@@ -23,18 +23,18 @@ export default function ProfilPage() {
             <h2 className="text-3xl font-bold mb-6">Sejarah Desa</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Desa Windusari memiliki sejarah panjang yang dimulai sejak zaman kerajaan Mataram. Nama "Windusari"
-                berasal dari kata "Windu" yang berarti tahun dan "Sari" yang berarti inti atau emas, mencerminkan
-                harapan akan kejayaan dan kemakmuran desa.
+                Desa Girimulyo memiliki sejarah panjang yang dimulai sejak zaman kerajaan Mataram. Nama "Girimulyo"
+                berasal dari kata "Giri" yang berarti gunung dan "Mulyo" yang berarti mulia atau makmur, mencerminkan
+                harapan akan kejayaan dan kemakmuran desa yang berada di lereng pegunungan.
               </p>
               <p>
-                Pada masa penjajahan Belanda, wilayah Windusari menjadi salah satu sentra pertanian yang penting.
+                Pada masa penjajahan Belanda, wilayah Girimulyo menjadi salah satu sentra pertanian yang penting.
                 Masyarakat desa telah lama mengandalkan pertanian sebagai mata pencaharian utama, terutama tanaman padi,
-                jagung, dan sayuran.
+                jagung, dan sayuran serta peternakan sapi perah.
               </p>
               <p>
-                Setelah Indonesia merdeka, Desa Windusari terus berkembang dan melakukan berbagai pembenahan
-                infrastruktur dan peningkatan kesejahteraan masyarakat. Hingga saat ini, Desa Windusari terus berupaya
+                Setelah Indonesia merdeka, Desa Girimulyo terus berkembang dan melakukan berbagai pembenahan
+                infrastruktur dan peningkatan kesejahteraan masyarakat. Hingga saat ini, Desa Girimulyo terus berupaya
                 menjadi desa mandiri dengan tetap mempertahankan nilai-nilai luhur dan kearifan lokal.
               </p>
             </div>
@@ -58,7 +58,7 @@ export default function ProfilPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground leading-relaxed">
-                    "Terwujudnya Desa Windusari yang Mandiri, Sejahtera, dan Berbudaya Berlandaskan Iman dan Taqwa pada
+                    "Terwujudnya Desa Girimulyo yang Mandiri, Sejahtera, dan Berbudaya Berlandaskan Iman dan Taqwa pada
                     Tahun 2025"
                   </p>
                 </CardContent>
@@ -172,20 +172,20 @@ export default function ProfilPage() {
               <CardContent className="pt-6">
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    <strong className="text-foreground">Lokasi:</strong> Desa Windusari terletak di Kecamatan Windusari,
+                    <strong className="text-foreground">Lokasi:</strong> Desa Girimulyo terletak di Kecamatan Windusari,
                     Kabupaten Magelang, Provinsi Jawa Tengah.
                   </p>
                   <div>
                     <strong className="text-foreground">Batas Wilayah:</strong>
                     <ul className="mt-2 space-y-2 ml-4">
-                      <li>• Sebelah Utara: Desa Tlahab</li>
-                      <li>• Sebelah Selatan: Desa Ngasinan</li>
-                      <li>• Sebelah Timur: Desa Sidorejo</li>
+                      <li>• Sebelah Utara: Desa Windusari</li>
+                      <li>• Sebelah Selatan: Desa Klopo</li>
+                      <li>• Sebelah Timur: Desa Purwosari</li>
                       <li>• Sebelah Barat: Desa Ngadirejo</li>
                     </ul>
                   </div>
                   <p>
-                    <strong className="text-foreground">Topografi:</strong> Desa Windusari berada pada ketinggian
+                    <strong className="text-foreground">Topografi:</strong> Desa Girimulyo berada pada ketinggian
                     sekitar 400-600 meter di atas permukaan laut dengan topografi berbukit dan dataran.
                   </p>
                   <p>

@@ -222,6 +222,31 @@ export default async function ArticleDetailPage({ params }: { params: Promise<{ 
               </div>
             </div>
           </div>
+
+          {/* PDF Viewer Section */}
+          {article.pdfUrl && (
+            <div className="mt-12">
+              <h2 className="text-2xl font-bold mb-4">Dokumen PDF</h2>
+              <div className="border rounded-lg overflow-hidden bg-muted/30">
+                <iframe
+                  src={article.pdfUrl}
+                  className="w-full h-[600px]"
+                  title="PDF Viewer"
+                />
+                <div className="p-4 bg-muted">
+                  <a
+                    href={article.pdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-primary hover:underline"
+                  >
+                    <span>Buka PDF di tab baru</span>
+                    <Share2 className="h-4 w-4" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Related Articles */}

@@ -18,7 +18,7 @@ const activities = [
   },
   {
     id: 2,
-    title: "Program KKN UNNES",
+    title: "Program KKN UGM 2025",
     date: "1-31 Desember 2024",
     category: "Pendidikan",
     description:

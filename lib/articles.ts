@@ -10,6 +10,7 @@ export interface Article {
   category: string
   featured: boolean
   image: string
+  pdfUrl?: string
 }
 
 export const articles: Article[] = [
@@ -19,6 +20,7 @@ export const articles: Article[] = [
     slug: "panduan-budidaya-padi-organik",
     excerpt:
       "Pelajari teknik dan metode terbaik untuk menghasilkan padi organik berkualitas tinggi. Dari pemilihan bibit hingga panen, panduan lengkap untuk petani desa.",
+    pdfUrl: "/pdfs/Report.pdf",
     content: `
 # Panduan Lengkap Budidaya Padi Organik untuk Petani Windusari
 
@@ -142,7 +144,7 @@ Budidaya padi organik memerlukan kesabaran dan ketekunan, namun memberikan keunt
 ## Kontak dan Konsultasi
 
 Untuk konsultasi lebih lanjut, hubungi:
-- **Tim KKN UNNES**
+- **Tim KKN UGM 2025**
 - Balai Penyuluhan Pertanian Windusari
 - Kelompok Tani Windusari
 
@@ -150,7 +152,7 @@ Untuk konsultasi lebih lanjut, hubungi:
 
 *Artikel ini disusun berdasarkan pengalaman petani lokal dan standar pertanian organik Indonesia.*
     `,
-    author: "Tim KKN UNNES",
+    author: "Tim KKN UGM 2025",
     date: "18 Desember 2024",
     readTime: "8 menit",
     category: "Pertanian",
