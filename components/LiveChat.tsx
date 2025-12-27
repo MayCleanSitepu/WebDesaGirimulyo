@@ -60,6 +60,9 @@ export default function LiveChatWidget() {
           </div>
 
           <div className="flex-1 p-3 overflow-y-auto space-y-2 text-sm">
+            <div className="p-2 rounded bg-amber-100 border border-amber-400">
+                Silakan tanyakan apapun seputar Desa Girimulyo, saya siap membantu!
+            </div>
             {messages.map((m, i) => (
               <div
                 key={i}
@@ -91,7 +94,7 @@ export default function LiveChatWidget() {
               onClick={sendMessage}
               className="bg-primary text-primary-foreground px-3 rounded hover:bg-primary/90 transition-colors"
             >
-              Send
+              Kirim
             </button>
           </div>
         </div>

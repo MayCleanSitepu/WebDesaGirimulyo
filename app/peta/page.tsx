@@ -34,32 +34,15 @@ export default function PetaPage() {
       <section className="flex-1 pb-8">
         <div className="container mx-auto px-4">
           <div className="bg-muted rounded-lg overflow-hidden" style={{ height: "600px" }}>
-            <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-              <div className="text-center space-y-4">
-                <div className="text-6xl">🗺️</div>
-                <p className="text-lg font-medium">Embed Story Maps / WebGIS di sini</p>
-                <p className="text-sm max-w-md mx-auto">
-                  Ganti konten ini dengan iframe embed dari platform WebGIS seperti ArcGIS StoryMaps, Google My Maps,
-                  atau platform pemetaan lainnya
-                </p>
-                <code className="block text-xs bg-background p-4 rounded mt-4 max-w-lg mx-auto text-left">
-                  {
-                    '<iframe src="URL_STORY_MAPS" \n  width="100%" \n  height="600" \n  frameBorder="0" \n  allowFullScreen \n/>'
-                  }
-                </code>
-              </div>
-            </div>
-            {/* 
-            Uncomment dan ganti URL dengan link Story Maps yang sebenarnya:
             <iframe 
-              src="https://storymaps.arcgis.com/stories/your-story-id" 
+              src="https://storymaps.arcgis.com/stories/469077cbddba4d92a5147a95510d807a" 
               width="100%" 
-              height="600" 
-              frameBorder="0" 
+              height="100%" 
+              className="border-0"
               allowFullScreen
-              title="Peta Desa Windusari"
+              allow="geolocation"
+              title="Story Maps Desa Windusari"
             />
-            */}
           </div>
         </div>
       </section>
