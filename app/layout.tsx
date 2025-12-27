@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import LiveChatWidget from "@/components/LiveChat"
 
+
 export const metadata: Metadata = {
   title: "Website Resmi Desa Windusari",
   description: "Informasi, Potensi, dan Kegiatan Desa Windusari",
