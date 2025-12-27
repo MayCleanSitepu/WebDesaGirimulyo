@@ -1,15 +1,8 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Poppins } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
-
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins",
-})
+import LiveChatWidget from "@/components/LiveChat"
 
 export const metadata: Metadata = {
   title: "Website Resmi Desa Windusari",
@@ -24,9 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
-      <body className={`${poppins.variable} ${inter.variable} font-sans antialiased`}>
+      <body className="font-sans antialiased">
         {children}
         <Analytics />
+        <LiveChatWidget />
       </body>
     </html>
   )
