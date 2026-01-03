@@ -35,7 +35,7 @@ export default function PetaPage() {
         <div className="container mx-auto px-4">
           <div className="bg-muted rounded-lg overflow-hidden" style={{ height: "600px" }}>
             <iframe 
-              src="https://storymaps.arcgis.com/stories/469077cbddba4d92a5147a95510d807a" 
+              src="https://storymaps.arcgis.com/stories/f2911e977df54d818139a72de7263d9b" 
               width="100%" 
               height="100%" 
               className="border-0"
