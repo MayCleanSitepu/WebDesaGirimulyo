@@ -115,19 +115,19 @@ export default function ProfilPage() {
                 <CardContent className="space-y-3 text-sm">
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Luas Wilayah</span>
-                    <span className="font-medium">450 Ha</span>
+                    <span className="font-medium">318 Ha</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">Luas Sawah</span>
-                    <span className="font-medium">280 Ha</span>
+                    <span className="text-muted-foreground">Luas Perkebunan</span>
+                    <span className="font-medium">13.7 Ha</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Luas Pemukiman</span>
-                    <span className="font-medium">120 Ha</span>
+                    <span className="font-medium">4.10 Ha</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Jumlah Dusun</span>
-                    <span className="font-medium">5 Dusun</span>
+                    <span className="font-medium">3 Dusun</span>
                   </div>
                 </CardContent>
               </Card>
@@ -142,19 +142,19 @@ export default function ProfilPage() {
                 <CardContent className="space-y-3 text-sm">
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Jumlah Penduduk</span>
-                    <span className="font-medium">3.542 Jiwa</span>
+                    <span className="font-medium">1.828 Jiwa</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Laki-laki</span>
-                    <span className="font-medium">1.765 Jiwa</span>
+                    <span className="font-medium">930 Jiwa</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Perempuan</span>
-                    <span className="font-medium">1.777 Jiwa</span>
+                    <span className="font-medium">898 Jiwa</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">Jumlah KK</span>
-                    <span className="font-medium">1.024 KK</span>
+                    <span className="text-muted-foreground">Kepadatan Penduduk</span>
+                    <span className="font-medium">575 Jiwa / Km²</span>
                   </div>
                 </CardContent>
               </Card>
@@ -178,15 +178,15 @@ export default function ProfilPage() {
                   <div>
                     <strong className="text-foreground">Batas Wilayah:</strong>
                     <ul className="mt-2 space-y-2 ml-4">
-                      <li>• Sebelah Utara: Desa Windusari</li>
-                      <li>• Sebelah Selatan: Desa Klopo</li>
-                      <li>• Sebelah Timur: Desa Purwosari</li>
-                      <li>• Sebelah Barat: Desa Ngadirejo</li>
+                      <li>• Sebelah Utara: Desa Ngemplak</li>
+                      <li>• Sebelah Selatan: Desa Tanjungsari</li>
+                      <li>• Sebelah Timur: Desa Wonoroto</li>
+                      <li>• Sebelah Barat: Desa Dampit</li>
                     </ul>
                   </div>
                   <p>
                     <strong className="text-foreground">Topografi:</strong> Desa Girimulyo berada pada ketinggian
-                    sekitar 400-600 meter di atas permukaan laut dengan topografi berbukit dan dataran.
+                    sekitar 1200 meter di atas permukaan laut dengan topografi berbukit dan dataran.
                   </p>
                   <p>
                     <strong className="text-foreground">Iklim:</strong> Beriklim tropis dengan curah hujan sedang, cocok
@@ -209,7 +209,7 @@ export default function ProfilPage() {
                 <CardContent className="pt-6">
                   <div className="text-center">
                     <p className="text-sm font-medium mb-1">Kepala Desa</p>
-                    <p className="text-lg font-bold">Bapak Sutrisno, S.Pd</p>
+                    <p className="text-lg font-bold">Bapak Budiman</p>
                   </div>
                 </CardContent>
               </Card>
@@ -218,7 +218,7 @@ export default function ProfilPage() {
                 <Card>
                   <CardContent className="pt-6 text-center">
                     <p className="text-sm text-muted-foreground mb-1">Sekretaris Desa</p>
-                    <p className="font-medium">Ibu Siti Aminah, S.Sos</p>
+                    <p className="font-medium">Nasikin</p>
                   </CardContent>
                 </Card>
                 <Card>
