@@ -206,23 +206,6 @@ export default async function ArticleDetailPage({ params }: { params: Promise<{ 
             })}
           </div>
 
-          {/* Author Info */}
-          <div className="mt-12 p-6 bg-muted rounded-lg">
-            <div className="flex items-start gap-4">
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                <User className="h-8 w-8 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-lg mb-1">Tentang Penulis</h3>
-                <p className="font-medium text-primary mb-2">{article.author}</p>
-                <p className="text-sm text-muted-foreground">
-                  Kontributor aktif dalam pengembangan konten edukatif untuk masyarakat Desa
-                  Girimulyo.
-                </p>
-              </div>
-            </div>
-          </div>
-
           {/* PDF Viewer Section */}
           {article.pdfUrl && (
             <div className="mt-12">
@@ -247,7 +230,25 @@ export default async function ArticleDetailPage({ params }: { params: Promise<{ 
               </div>
             </div>
           )}
+          {/* Author Info */}
+          <div className="mt-12 p-6 bg-muted rounded-lg">
+            <div className="flex items-start gap-4">
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                <User className="h-8 w-8 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg mb-1">Tentang Penulis</h3>
+                <p className="font-medium text-primary mb-2">{article.author}</p>
+                <p className="text-sm text-muted-foreground">
+                  Kontributor aktif dalam pengembangan konten edukatif untuk masyarakat Desa
+                  Girimulyo.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+
+        
 
         {/* Related Articles */}
         {relatedArticles.length > 0 && (

@@ -1554,6 +1554,51 @@ Kerajinan bambu adalah peluang usaha yang menjanjikan dengan modal relatif kecil
     featured: false,
     image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=800&q=80",
   },
+  {
+    id: 7,
+    title: "Pengenalan & Manfaat Bibit Rumput Unggul Gama Umami",
+    slug: "pengenalan-bibit-rumput-gama-umami",
+    excerpt:
+      "Bibit rumput Gama Umami adalah solusi tepat untuk pakan ternak berkualitas tinggi. Pelajari keunggulan dan cara budidayanya di sini.",
+    pdfUrl: "/pdfs/Proker 1 - Ayu.pdf",
+    content: `# Pengenalan & Manfaat Bibit Rumput Unggul Gama Umami`,
+    author: "Ayu Mei S",
+    date: "5 Januari 2026",
+    readTime: "10 menit",
+    category: "Peternakan",
+    featured: false,
+    image: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800&q=80",
+  },
+  {
+    id: 8,
+    title: "Cara Penanaman Bibit Rumput Unggul Gama Umami",
+    slug: "cara-penanaman-bibit-rumput-gama-umami",
+    excerpt:
+      "Bibit rumput Gama Umami adalah solusi tepat untuk pakan ternak berkualitas tinggi. Pelajari keunggulan dan cara budidayanya di sini.",
+    pdfUrl: "/pdfs/Proker 2 - Ayu.pdf",
+    content: `# Cara Penanaman Bibit Rumput Unggul Gama Umami`,
+    author: "Ayu Mei S",
+    date: "5 Januari 2026",
+    readTime: "10 menit",
+    category: "Peternakan",
+    featured: false,
+    image: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800&q=80",
+  },
+  {
+    id: 9,
+    title: "test",
+    slug: "test",
+    excerpt:
+      "test",
+    pdfUrl: "/pdfs/Report.pdf",
+    content: `# Pengenalan & Manfaat Bibit Rumput Unggul Gama Umami`,
+    author: "Ayu Mei S",
+    date: "5 Januari 2026",
+    readTime: "10 menit",
+    category: "Peternakan",
+    featured: false,
+    image: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800&q=80",
+  },
 ]
 
 export function getArticleBySlug(slug: string): Article | undefined {
