@@ -39,13 +39,12 @@ export default function BookletPage() {
               {featuredBooklets.map((booklet) => (
                 <Link key={booklet.id} href={`/booklet/${booklet.slug}`}>
                   <Card className="overflow-hidden hover:shadow-xl transition-all group cursor-pointer h-full">
-                  <div className="h-64 bg-muted relative overflow-hidden">
+                  <div className="relative w-full aspect-video bg-muted overflow-hidden">
                     <Image
                       src={booklet.image}
                       alt={booklet.title}
-                      width={400}
-                      height={256}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
                       placeholder="blur"
                       blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyovS/xV/ByXCrr1bwurf6/1oO//9k="
                     />
@@ -89,13 +88,12 @@ export default function BookletPage() {
                 <Link key={booklet.id} href={`/booklet/${booklet.slug}`}>
                   <Card className="overflow-hidden hover:shadow-lg transition-all group cursor-pointer mb-3">
                   <div className="md:flex">
-                    <div className="md:w-80 h-56 md:h-auto bg-muted relative overflow-hidden flex-shrink-0">
+                    <div className="relative md:w-80 aspect-video md:aspect-auto md:h-auto bg-muted overflow-hidden flex-shrink-0">
                       <Image
                         src={booklet.image}
                         alt={booklet.title}
-                        width={320}
-                        height={224}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
                         placeholder="blur"
                         blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyovS/xV/ByXCrr1bwurf6/1oO//9k="
                       />

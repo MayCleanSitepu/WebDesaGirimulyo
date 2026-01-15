@@ -1,13 +1,21 @@
 "use client"
 
+import { useState } from "react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { CowStable3D } from "@/components/cow-stable-3d"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Info } from "lucide-react"
 
 export default function KandangInteraktifPage() {
+  const [hoveredCard, setHoveredCard] = useState<string | null>(null)
+
+  const cardColors = {
+    "Tempat Pakan": "#3b82f6",
+    "Sistem Minum": "#10b981",
+    "Atap": "#f59e0b",
+    "Drainase": "#8b5cf6"
+  }
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -48,63 +56,86 @@ export default function KandangInteraktifPage() {
           </div>
 
           {/* Information Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            <Card>
+          <div className="flex justify-center mb-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl">
+              <Card 
+                className="transition-all hover:shadow-lg hover:scale-105 cursor-pointer"
+                onMouseEnter={() => setHoveredCard("Tempat Pakan")}
+                onMouseLeave={() => setHoveredCard(null)}
+              style={{
+                borderColor: hoveredCard === "Tempat Pakan" ? "#3b82f6" : undefined,
+                borderWidth: hoveredCard === "Tempat Pakan" ? "2px" : undefined
+              }}
+            >
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Info className="h-4 w-4 text-primary" />
+                  <div className="h-8 w-8 rounded-full flex items-center justify-center" style={{backgroundColor: '#3b82f620'}}>
+                    <div className="h-3 w-3 rounded-full" style={{backgroundColor: '#3b82f6'}} />
                   </div>
-                  Kapasitas
+                  Tempat Pakan
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-2xl font-bold text-primary mb-2">20-30 Ekor</p>
                 <p className="text-sm text-muted-foreground">
-                  Kandang dirancang untuk menampung 20-30 ekor sapi dengan ruang yang nyaman
+                  Area pemberian pakan dengan sistem otomatis untuk efisiensi dan kebersihan
                 </p>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card 
+              className="transition-all hover:shadow-lg hover:scale-105 cursor-pointer"
+              onMouseEnter={() => setHoveredCard("Atap")}
+              onMouseLeave={() => setHoveredCard(null)}
+              style={{
+                borderColor: hoveredCard === "Atap" ? "#f59e0b" : undefined,
+                borderWidth: hoveredCard === "Atap" ? "2px" : undefined
+              }}
+            >
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Info className="h-4 w-4 text-primary" />
+                  <div className="h-8 w-8 rounded-full flex items-center justify-center" style={{backgroundColor: '#f59e0b20'}}>
+                    <div className="h-3 w-3 rounded-full" style={{backgroundColor: '#f59e0b'}} />
                   </div>
-                  Ventilasi
+                  Atap
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-2xl font-bold text-primary mb-2">Optimal</p>
                 <p className="text-sm text-muted-foreground">
-                  Sistem ventilasi silang untuk sirkulasi udara yang baik dan kesehatan ternak
+                  Atap pelindung dari panas dan hujan dengan material tahan lama
                 </p>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card 
+              className="transition-all hover:shadow-lg hover:scale-105 cursor-pointer"
+              onMouseEnter={() => setHoveredCard("Drainase")}
+              onMouseLeave={() => setHoveredCard(null)}
+              style={{
+                borderColor: hoveredCard === "Drainase" ? "#8b5cf6" : undefined,
+                borderWidth: hoveredCard === "Drainase" ? "2px" : undefined
+              }}
+            >
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Info className="h-4 w-4 text-primary" />
+                  <div className="h-8 w-8 rounded-full flex items-center justify-center" style={{backgroundColor: '#8b5cf620'}}>
+                    <div className="h-3 w-3 rounded-full" style={{backgroundColor: '#8b5cf6'}} />
                   </div>
                   Drainase
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-2xl font-bold text-primary mb-2">Modern</p>
                 <p className="text-sm text-muted-foreground">
-                  Sistem drainase terintegrasi untuk menjaga kebersihan dan kesehatan kandang
+                  Sistem drainase modern terintegrasi untuk menjaga kebersihan kandang
                 </p>
               </CardContent>
             </Card>
           </div>
+        </div>
 
           {/* Features List */}
           <Card>
             <CardHeader>
-              <CardTitle>Fitur Utama Kandang</CardTitle>
+              <CardTitle>Spesifikasi Kandang</CardTitle>
               <CardDescription>
                 Kandang sapi modern dengan berbagai fitur untuk kenyamanan dan produktivitas ternak
               </CardDescription>
@@ -116,9 +147,9 @@ export default function KandangInteraktifPage() {
                     <div className="h-2 w-2 rounded-full bg-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Tempat Pakan Otomatis</h4>
+                    <h4 className="font-semibold mb-1">Kapasitas</h4>
                     <p className="text-sm text-muted-foreground">
-                      Sistem pemberian pakan yang terukur dan higienis
+                      Dirancang untuk menampung 20-30 ekor sapi dengan ruang yang nyaman
                     </p>
                   </div>
                 </div>
@@ -128,21 +159,9 @@ export default function KandangInteraktifPage() {
                     <div className="h-2 w-2 rounded-full bg-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Sistem Minum Otomatis</h4>
+                    <h4 className="font-semibold mb-1">Ventilasi Optimal</h4>
                     <p className="text-sm text-muted-foreground">
-                      Akses air bersih yang mudah dan berkelanjutan untuk setiap sapi
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="h-2 w-2 rounded-full bg-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Atap Pelindung</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Melindungi ternak dari panas dan hujan dengan material tahan lama
+                      Sistem ventilasi silang untuk sirkulasi udara yang baik dan kesehatan ternak
                     </p>
                   </div>
                 </div>
@@ -166,7 +185,7 @@ export default function KandangInteraktifPage() {
                   <div>
                     <h4 className="font-semibold mb-1">Area Istirahat</h4>
                     <p className="text-sm text-muted-foreground">
-                      Ruang khusus untuk sapi beristirahat dengan nyaman
+                      Ruang khusus untuk sapi beristirahat dengan nyaman dan aman
                     </p>
                   </div>
                 </div>
@@ -179,6 +198,18 @@ export default function KandangInteraktifPage() {
                     <h4 className="font-semibold mb-1">Pencahayaan Alami</h4>
                     <p className="text-sm text-muted-foreground">
                       Desain yang memaksimalkan pencahayaan alami untuk kesehatan ternak
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="h-2 w-2 rounded-full bg-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Material Berkualitas</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Menggunakan material tahan lama dan ramah lingkungan
                     </p>
                   </div>
                 </div>
