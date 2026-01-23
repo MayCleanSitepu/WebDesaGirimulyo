@@ -6,6 +6,32 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { ArrowRight, Users, Calendar, MapPinned } from "lucide-react"
 
+const featuredProducts = [
+  {
+    id: 7,
+    name: "Es Krim Susu Sapi",
+    category: "Produk Olahan",
+    description:
+      "Es krim premium dengan berbagai varian rasa yang terbuat dari susu sapi segar. Tekstur lembut dan rasa yang nikmat.",
+    image: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=400&q=80",
+  },
+  {
+    id: 8,
+    name: "Susu Kental Manis",
+    category: "Produk Olahan",
+    description: "Susu kental manis dari susu sapi murni. Cocok untuk campuran minuman, topping dessert, atau diminum langsung.",
+    image: "https://images.unsplash.com/photo-1563636619-e9143da7973b?w=400&q=80",
+  },
+  {
+    id: 9,
+    name: "Susu Bubuk Full Cream",
+    category: "Produk Susu",
+    description:
+      "Susu bubuk full cream dengan kandungan nutrisi lengkap. Praktis dan tahan lama, cocok untuk segala usia.",
+    image: "https://images.unsplash.com/photo-1628088062854-d1870b4553da?w=400&q=80",
+  },
+]
+
 export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -94,74 +120,30 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="h-48 bg-accent relative">
-                <Image 
-                  src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&q=80" 
-                  alt="Beras Organik - Organic Rice Farming" 
-                  width={400}
-                  height={192}
-                  className="w-full h-full object-cover"
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyovS/xV/ByXCrr1bwurf6/1oO//9k="
-                />
-              </div>
-              <CardHeader>
-                <CardTitle>Beras Organik</CardTitle>
-                <CardDescription>Produk Pertanian</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  Beras organik berkualitas tinggi hasil pertanian warga dengan metode ramah lingkungan.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="h-48 bg-accent relative">
-                <Image 
-                  src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&q=80" 
-                  alt="Kerajinan Bambu - Traditional Bamboo Crafts" 
-                  width={400}
-                  height={192}
-                  className="w-full h-full object-cover"
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyovS/xV/ByXCrr1bwurf6/1oO//9k="
-                />
-              </div>
-              <CardHeader>
-                <CardTitle>Kerajinan Bambu</CardTitle>
-                <CardDescription>UMKM Lokal</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  Berbagai produk kerajinan bambu handmade dengan desain modern dan tradisional.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="h-48 bg-accent relative">
-                <Image
-                  src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80"
-                  alt="Makanan Tradisional - Traditional Indonesian Food"
-                  width={400}
-                  height={192}
-                  className="w-full h-full object-cover"
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyovS/xV/ByXCrr1bwurf6/1oO//9k="
-                />
-              </div>
-              <CardHeader>
-                <CardTitle>Makanan Tradisional</CardTitle>
-                <CardDescription>Kuliner Khas</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  Aneka makanan ringan dan kudapan tradisional khas Desa Girimulyo yang lezat.
-                </p>
-              </CardContent>
-            </Card>
+            {featuredProducts.map((product) => (
+              <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="h-48 bg-accent relative">
+                  <Image 
+                    src={product.image} 
+                    alt={product.name} 
+                    width={400}
+                    height={192}
+                    className="w-full h-full object-cover"
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyovS/xV/ByXCrr1bwurf6/1oO//9k="
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle>{product.name}</CardTitle>
+                  <CardDescription>{product.category}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    {product.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
 
           <div className="text-center mt-8">

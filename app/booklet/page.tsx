@@ -71,10 +71,6 @@ export default function BookletPage() {
                     <CardDescription className="text-base leading-relaxed">{booklet.excerpt}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <Button variant="ghost" className="gap-2 px-0 hover:gap-3 transition-all">
-                      Baca Selengkapnya
-                      <ArrowRight className="h-4 w-4" />
-                    </Button>
                   </CardContent>
                 </Card>
               </Link>
@@ -121,10 +117,6 @@ export default function BookletPage() {
                         <CardDescription className="leading-relaxed">{booklet.excerpt}</CardDescription>
                       </CardHeader>
                       <CardContent>
-                        <Button variant="ghost" className="gap-2 px-0 hover:gap-3 transition-all">
-                          Baca Selengkapnya
-                          <ArrowRight className="h-4 w-4" />
-                        </Button>
                       </CardContent>
                     </div>
                   </div>
