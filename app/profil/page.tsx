@@ -218,19 +218,19 @@ export default function ProfilPage() {
                 <Card>
                   <CardContent className="pt-6 text-center">
                     <p className="text-sm text-muted-foreground mb-1">Sekretaris Desa</p>
-                    <p className="font-medium">Nasikin</p>
+                    <p className="font-medium"></p>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardContent className="pt-6 text-center">
                     <p className="text-sm text-muted-foreground mb-1">Kaur Keuangan</p>
-                    <p className="font-medium">Bapak Edi Susanto</p>
+                    <p className="font-medium"></p>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardContent className="pt-6 text-center">
                     <p className="text-sm text-muted-foreground mb-1">Kaur Umum</p>
-                    <p className="font-medium">Ibu Retno Wulandari</p>
+                    <p className="font-medium"></p>
                   </CardContent>
                 </Card>
               </div>
@@ -239,13 +239,13 @@ export default function ProfilPage() {
                 <Card>
                   <CardContent className="pt-6 text-center">
                     <p className="text-sm text-muted-foreground mb-1">Kasi Pemerintahan</p>
-                    <p className="font-medium">Bapak Agus Priyanto</p>
+                    <p className="font-medium"></p>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardContent className="pt-6 text-center">
                     <p className="text-sm text-muted-foreground mb-1">Kasi Kesejahteraan</p>
-                    <p className="font-medium">Ibu Endang Susilowati</p>
+                    <p className="font-medium"></p>
                   </CardContent>
                 </Card>
               </div>

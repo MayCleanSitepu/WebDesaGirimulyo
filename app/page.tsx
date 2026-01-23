@@ -212,7 +212,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <CardTitle>Program KKN UGM 2025</CardTitle>
-                    <CardDescription>1-31 Desember 2024</CardDescription>
+                    <CardDescription>20 Desember - 7 Februari 2026</CardDescription>
                   </div>
                 </div>
               </CardHeader>

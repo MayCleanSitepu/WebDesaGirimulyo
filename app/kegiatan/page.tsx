@@ -22,7 +22,7 @@ const activities = [
     date: "1-31 Desember 2024",
     category: "Pendidikan",
     description:
-      "Mahasiswa KKN Universitas Negeri Semarang melaksanakan program pengabdian masyarakat di bidang pendidikan, kesehatan, dan pemberdayaan ekonomi.",
+      "Mahasiswa KKN Universitas Gadjah Mada melaksanakan program pengabdian masyarakat di bidang pendidikan, kesehatan, dan pemberdayaan ekonomi.",
     icon: BookOpen,
     image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=500&q=80",
   },
