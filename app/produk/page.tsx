@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 const suppliers = [
   {
@@ -13,6 +14,8 @@ const suppliers = [
     address: "Dusun Cepogo, Desa Girimulyo",
     rt_rw: "015/005",
     whatsapp: "628xxxxxxxxxx",
+    image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&q=80",
+    description: "Supplier susu sapi perah berkualitas dengan pengalaman bertahun-tahun",
   },
   {
     id: 2,
@@ -20,6 +23,8 @@ const suppliers = [
     address: "Dusun Cepogo, Desa Girimulyo",
     rt_rw: "014/005",
     whatsapp: "628xxxxxxxxxx",
+    image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&q=80",
+    description: "Menyediakan susu segar setiap hari dengan standar kebersihan tinggi",
   },
   {
     id: 3,
@@ -27,6 +32,8 @@ const suppliers = [
     address: "Dusun Cepogo, Desa Girimulyo",
     rt_rw: "002/003",
     whatsapp: "628xxxxxxxxxx",
+    image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&q=80",
+    description: "Peternak sapi perah profesional dengan produksi susu berkualitas",
   },
   {
     id: 4,
@@ -34,6 +41,8 @@ const suppliers = [
     address: "Dusun Cepogo, Desa Girimulyo",
     rt_rw: "013/005",
     whatsapp: "628xxxxxxxxxx",
+    image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&q=80",
+    description: "Mengutamakan kualitas dan kesegaran susu untuk kepuasan pelanggan",
   },
   {
     id: 5,
@@ -41,6 +50,8 @@ const suppliers = [
     address: "Dusun Cepogo, Desa Girimulyo",
     rt_rw: "013/005",
     whatsapp: "628xxxxxxxxxx",
+    image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&q=80",
+    description: "Supplier susu sapi murni tanpa bahan campuran tambahan",
   },
   {
     id: 6,
@@ -48,6 +59,8 @@ const suppliers = [
     address: "Dusun Cepogo, Desa Girimulyo",
     rt_rw: "014/005",
     whatsapp: "628xxxxxxxxxx",
+    image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&q=80",
+    description: "Berpengalaman dalam menghasilkan susu sapi dengan kualitas terbaik",
   },
   {
     id: 7,
@@ -55,6 +68,8 @@ const suppliers = [
     address: "Dusun Cepogo, Desa Girimulyo",
     rt_rw: "014/005",
     whatsapp: "628xxxxxxxxxx",
+    image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&q=80",
+    description: "Menyediakan susu segar dari peternakan sendiri setiap hari",
   },
   {
     id: 8,
@@ -62,6 +77,8 @@ const suppliers = [
     address: "Dusun Cepogo, Desa Girimulyo",
     rt_rw: "015/005",
     whatsapp: "628xxxxxxxxxx",
+    image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&q=80",
+    description: "Peternakan sapi perah modern dengan sistem kebersihan terjaga",
   },
   {
     id: 9,
@@ -69,6 +86,8 @@ const suppliers = [
     address: "Dusun Cepogo, Desa Girimulyo",
     rt_rw: "016/005",
     whatsapp: "628xxxxxxxxxx",
+    image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&q=80",
+    description: "Supplier susu sapi perah terpercaya dengan harga kompetitif",
   },
   {
     id: 10,
@@ -76,6 +95,8 @@ const suppliers = [
     address: "Dusun Cepogo, Desa Girimulyo",
     rt_rw: "015/005",
     whatsapp: "628xxxxxxxxxx",
+    image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&q=80",
+    description: "Menghasilkan susu berkualitas tinggi dari sapi yang sehat",
   },
   {
     id: 11,
@@ -83,6 +104,8 @@ const suppliers = [
     address: "Dusun Cepogo, Desa Girimulyo",
     rt_rw: "002/005",
     whatsapp: "628xxxxxxxxxx",
+    image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&q=80",
+    description: "Pemasok susu segar dengan proses pemerahan yang higienis",
   },
   {
     id: 12,
@@ -90,6 +113,8 @@ const suppliers = [
     address: "Dusun Cepogo, Desa Girimulyo",
     rt_rw: "013/015",
     whatsapp: "628xxxxxxxxxx",
+    image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&q=80",
+    description: "Produksi susu sapi murni dengan standar kualitas internasional",
   },
   {
     id: 13,
@@ -97,6 +122,8 @@ const suppliers = [
     address: "Dusun Cepogo, Desa Girimulyo",
     rt_rw: "016/005",
     whatsapp: "628xxxxxxxxxx",
+    image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&q=80",
+    description: "Menyediakan susu sapi segar langsung dari peternakan lokal",
   },
   {
     id: 14,
@@ -104,6 +131,8 @@ const suppliers = [
     address: "Dusun Cepogo, Desa Girimulyo",
     rt_rw: "016/005",
     whatsapp: "628xxxxxxxxxx",
+    image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&q=80",
+    description: "Supplier susu sapi dengan komitmen pada kualitas dan kesegaran",
   },
   {
     id: 15,
@@ -111,6 +140,8 @@ const suppliers = [
     address: "Dusun Cepogo, Desa Girimulyo",
     rt_rw: "016/005",
     whatsapp: "628xxxxxxxxxx",
+    image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&q=80",
+    description: "Peternakan sapi perah dengan manajemen modern dan profesional",
   },
   {
     id: 16,
@@ -118,6 +149,8 @@ const suppliers = [
     address: "Dusun Cepogo, Desa Girimulyo",
     rt_rw: "016/005",
     whatsapp: "628xxxxxxxxxx",
+    image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&q=80",
+    description: "Mengutamakan kesehatan sapi untuk menghasilkan susu berkualitas",
   },
   {
     id: 17,
@@ -125,6 +158,8 @@ const suppliers = [
     address: "Dusun Cepogo, Desa Girimulyo",
     rt_rw: "014/003",
     whatsapp: "628xxxxxxxxxx",
+    image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&q=80",
+    description: "Susu segar setiap hari dengan proses yang terjaga kebersihannya",
   },
   {
     id: 18,
@@ -132,6 +167,8 @@ const suppliers = [
     address: "Dusun Cepogo, Desa Girimulyo",
     rt_rw: "016/005",
     whatsapp: "628xxxxxxxxxx",
+    image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&q=80",
+    description: "Penyedia susu sapi murni dengan sistem peternakan yang baik",
   },
 ]
 
@@ -158,98 +195,64 @@ export default function ProdukPage() {
         </div>
       </section>
 
-      {/* Suppliers Table */}
+      {/* Suppliers Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          {/* Desktop Table View */}
-          <div className="hidden md:block overflow-x-auto bg-white rounded-lg shadow">
-            <table className="w-full">
-              <thead className="bg-primary text-primary-foreground">
-                <tr>
-                  <th className="px-6 py-4 text-left font-semibold">No</th>
-                  <th className="px-6 py-4 text-left font-semibold">Nama Supplier</th>
-                  <th className="px-6 py-4 text-left font-semibold">Alamat</th>
-                  <th className="px-6 py-4 text-left font-semibold">RT/RW</th>
-                  <th className="px-6 py-4 text-left font-semibold">WhatsApp</th>
-                  <th className="px-6 py-4 text-center font-semibold">Aksi</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                {suppliers.map((supplier, index) => (
-                  <tr key={supplier.id} className="hover:bg-gray-50 transition-colors">
-                    <td className="px-6 py-4 text-sm">{index + 1}</td>
-                    <td className="px-6 py-4 font-medium">{supplier.name}</td>
-                    <td className="px-6 py-4 text-sm text-gray-600">{supplier.address}</td>
-                    <td className="px-6 py-4 text-sm">
-                      <Badge variant="outline">{supplier.rt_rw}</Badge>
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-600">{supplier.whatsapp}</td>
-                    <td className="px-6 py-4 text-center">
-                      <Button
-                        size="sm"
-                        onClick={() => handleContact(supplier.name, supplier.whatsapp)}
-                        className="flex items-center justify-center gap-2 mx-auto"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="14"
-                          height="14"
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                        >
-                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                        </svg>
-                        Kontak
-                      </Button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          {/* Mobile Card View */}
-          <div className="md:hidden grid gap-4">
-            {suppliers.map((supplier, index) => (
-              <Card key={supplier.id} className="overflow-hidden">
-                <CardHeader className="bg-primary/5">
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
-                        <Badge className="bg-primary text-xs">{index + 1}</Badge>
-                        <Badge variant="outline" className="text-xs">{supplier.rt_rw}</Badge>
-                      </div>
-                      <CardTitle className="text-lg">{supplier.name}</CardTitle>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="pt-4">
-                  <div className="space-y-3">
-                    <div>
-                      <p className="text-xs text-muted-foreground mb-1">Alamat</p>
-                      <p className="text-sm">{supplier.address}</p>
-                    </div>
-                    <div>
-                      <p className="text-xs text-muted-foreground mb-1">WhatsApp</p>
-                      <p className="text-sm font-mono">{supplier.whatsapp}</p>
-                    </div>
-                    <Button
-                      size="sm"
-                      onClick={() => handleContact(supplier.name, supplier.whatsapp)}
-                      className="w-full flex items-center justify-center gap-2"
-                    >
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {suppliers.map((supplier) => (
+              <Card key={supplier.id} className="overflow-hidden hover:shadow-lg transition-all">
+                <div className="h-48 bg-muted relative">
+                  <Image
+                    src={supplier.image}
+                    alt={supplier.name}
+                    width={400}
+                    height={192}
+                    className="w-full h-full object-cover"
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyovS/xV/ByXCrr1bwurf6/1oO//9k="
+                  />
+                  <Badge className="absolute top-4 right-4 bg-primary">RT {supplier.rt_rw}</Badge>
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-xl truncate">{supplier.name}</CardTitle>
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <div className="flex items-start gap-2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="14"
-                        height="14"
+                        width="16"
+                        height="16"
                         viewBox="0 0 24 24"
-                        fill="currentColor"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="mt-0.5 flex-shrink-0"
                       >
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                        <circle cx="12" cy="10" r="3" />
                       </svg>
-                      Kontak WhatsApp
-                    </Button>
+                      <span className="truncate">{supplier.address}</span>
+                    </div>
+                    <p className="text-sm line-clamp-2">{supplier.description}</p>
                   </div>
+                </CardHeader>
+                <CardContent>
+                  <Button
+                    onClick={() => handleContact(supplier.name, supplier.whatsapp)}
+                    className="w-full flex items-center justify-center gap-2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                    Kontak WhatsApp
+                  </Button>
                 </CardContent>
               </Card>
             ))}
