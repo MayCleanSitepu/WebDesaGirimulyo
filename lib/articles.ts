@@ -163,6 +163,26 @@ Detail pelaksanaan program dapat dilihat pada dokumen PDF yang terlampir.
     featured: false,
     image: "/haidar1.jpeg",
   },
+  {
+    id: 8,
+    title: "Pedoman SOP dan Pembagian Tugas Kelompok Peternak",
+    slug: "pedoman-sop-pembagian-tugas-kelompok-peternak",
+    excerpt:
+      "Modul ini berisi SOP peternakan dan pembagian kerja kelompok peternak yang memuat tentang kesehatan hewan, kebersihan dan pemerahan susu, nutrisi, kesejahteraan hewan, lingkungan, serta pengelolaan sosial dan ekonomi yang berdasarkan standarisasi internasional.",
+    pdfUrl: "/pdfs/Proker 2 - Ais.pdf",
+    content: `# Pedoman SOP dan Pembagian Tugas Kelompok Peternak
+
+---
+
+*Untuk informasi lebih lengkap, silakan unduh dokumen PDF di bawah.*
+    `,
+    author: "'Aisyah Khayyiratunnisa",
+    date: "23 Januari 2026",
+    readTime: "5 menit",
+    category: "Program Kerja",
+    featured: false,
+    image: "/ais2.jpeg",
+  },
 ]
 
 export function getArticleBySlug(slug: string): Article | undefined {

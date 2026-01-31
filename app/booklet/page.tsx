@@ -140,7 +140,7 @@ export default function BookletPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
               <div>
                 <p className="font-medium">Email</p>
-                <p className="text-muted-foreground">info@desawindusari.id</p>
+                <p className="text-muted-foreground">info@desagirimulyo.id</p>
               </div>
               <div>
                 <p className="font-medium">WhatsApp</p>
