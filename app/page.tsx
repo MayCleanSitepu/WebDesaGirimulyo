@@ -1,10 +1,13 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { ArrowRight, Users, Calendar, MapPinned } from "lucide-react"
+import { ArrowRight, Users, Calendar, MapPinned, Play, Pause, Volume2, VolumeX } from "lucide-react"
+import { useRef, useState } from "react"
 
 const featuredProducts = [
   {
@@ -33,36 +36,143 @@ const featuredProducts = [
 ]
 
 export default function HomePage() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [isPlaying, setIsPlaying] = useState(true)
+  const [isMuted, setIsMuted] = useState(false)
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause()
+      } else {
+        videoRef.current.play()
+      }
+      setIsPlaying(!isPlaying)
+    }
+  }
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted
+      setIsMuted(!isMuted)
+    }
+  }
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="relative bg-primary text-primary-foreground py-20 md:py-32">
-        <div className="absolute inset-0 bg-[url('/splash.jpg')] bg-cover bg-center opacity-20" />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-balance">
-          Website Resmi Desa Girimulyo
-        </h1>
-        <p className="text-lg md:text-xl mb-8 text-primary-foreground/90 text-pretty">
-          Informasi, Potensi, dan Kegiatan Desa Girimulyo
-        </p>
-        <div className="flex flex-wrap gap-4">
-          <Button size="lg" variant="secondary" asChild>
-            <Link href="/profil">
-          Profil Desa <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            asChild
-            className="bg-primary-foreground/10 border-primary-foreground/20 hover:bg-primary-foreground/20"
-          >
-            <Link href="/produk">Produk Andalan</Link>
-          </Button>
+      {/* Hero Section with Video */}
+      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 bg-[url('/splash.jpg')] bg-cover bg-center opacity-30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
+        
+        <div className="container mx-auto px-4 py-4 md:py-8 relative z-10">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 lg:items-start min-h-[calc(100vh-120px)]">
+            
+            {/* Heading - Order 1 on mobile, Order 2 on desktop */}
+            <div className="order-1 lg:order-2">
+              <div className="inline-block px-4 py-2 bg-white/10 border border-white/30 rounded-full mb-4">
+                <span className="text-sm font-semibold text-primary-foreground">Website Resmi</span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 lg:mb-6 text-balance leading-tight">
+                DESA GIRIMULYO
+              </h1>
+            </div>
+
+            {/* Video Section - Order 2 on mobile, Order 1 on desktop */}
+            <div className="relative lg:pt-20 group order-2 lg:order-1 lg:row-span-3">
+              <div className="relative rounded-lg overflow-hidden shadow-2xl border-4 border-white/30">
+                <video
+                  ref={videoRef}
+                  className="w-full h-auto"
+                  autoPlay
+                  loop
+                  playsInline
+                  preload="metadata"
+                  muted={false}
+                >
+                  <source src="/video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                
+                {/* Video Controls */}
+                <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                  <button
+                    onClick={togglePlay}
+                    className="p-3 bg-black/70 hover:bg-black/90 rounded-full backdrop-blur-sm transition-all"
+                    aria-label={isPlaying ? "Pause video" : "Play video"}
+                  >
+                    {isPlaying ? (
+                      <Pause className="w-5 h-5 text-white" />
+                    ) : (
+                      <Play className="w-5 h-5 text-white" />
+                    )}
+                  </button>
+                  <button
+                    onClick={toggleMute}
+                    className="p-3 bg-black/70 hover:bg-black/90 rounded-full backdrop-blur-sm transition-all"
+                    aria-label={isMuted ? "Unmute video" : "Mute video"}
+                  >
+                    {isMuted ? (
+                      <VolumeX className="w-5 h-5 text-white" />
+                    ) : (
+                      <Volume2 className="w-5 h-5 text-white" />
+                    )}
+                  </button>
+                </div>
+              </div>
+              {/* Decorative Elements */}
+              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/20 rounded-full blur-3xl" />
+              <div className="absolute -top-4 -left-4 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl" />
+            </div>
+
+            {/* Description and Buttons - Order 3 on mobile, Order 3 on desktop */}
+            <div className="space-y-6 order-3 lg:order-3">
+              <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-xl">
+                Temukan keindahan dan potensi Desa Girimulyo. Jelajahi informasi, produk unggulan, dan berbagai kegiatan masyarakat desa yang harmonis dan berkembang.
+              </p>
+
+              <div className="flex flex-wrap gap-4">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8" asChild>
+                  <Link href="/profil">
+                    Jelajahi Sekarang <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-white/10 border-white/30 hover:bg-white/20 text-white font-semibold px-8 backdrop-blur-sm"
+                  asChild
+                >
+                  <Link href="/produk">Lihat Produk</Link>
+                </Button>
+              </div>
+
+              {/* Stats or Quick Info */}
+              <div className="grid grid-cols-3 gap-4 pt-8 border-t border-white/10">
+                <div>
+                  <div className="text-2xl md:text-3xl font-bold text-primary">3,500+</div>
+                  <div className="text-sm text-gray-300">Penduduk</div>
+                </div>
+                <div>
+                  <div className="text-2xl md:text-3xl font-bold text-primary">450</div>
+                  <div className="text-sm text-gray-300">Hektar</div>
+                </div>
+                <div>
+                  <div className="text-2xl md:text-3xl font-bold text-primary">10+</div>
+                  <div className="text-sm text-gray-300">UMKM</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-white/40 rounded-full flex items-start justify-center p-2">
+            <div className="w-1 h-3 bg-white/60 rounded-full" />
           </div>
         </div>
       </section>
