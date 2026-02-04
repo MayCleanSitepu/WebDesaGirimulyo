@@ -6,8 +6,13 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { ArrowRight, Users, Calendar, MapPinned, Play, Pause, Volume2, VolumeX } from "lucide-react"
+import { ArrowRight, Users, Calendar, MapPinned, Play, Pause, Volume2, VolumeX, ChevronLeft, ChevronRight } from "lucide-react"
 import { useRef, useState } from "react"
+
+const videos = [
+  { id: 1, src: "/video.mp4", title: "Video 1" },
+  { id: 2, src: "/video2.mp4", title: "Video 2" },
+]
 
 const featuredProducts = [
   {
@@ -40,6 +45,7 @@ export default function HomePage() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [isMuted, setIsMuted] = useState(true)
   const [showControls, setShowControls] = useState(false)
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
 
   const togglePlay = () => {
     if (videoRef.current) {
@@ -66,6 +72,22 @@ export default function HomePage() {
       setTimeout(() => {
         setShowControls(false)
       }, 3000)
+    }
+  }
+
+  const handlePreviousVideo = () => {
+    setCurrentVideoIndex((prev) => (prev === 0 ? videos.length - 1 : prev - 1))
+    setIsPlaying(false)
+    if (videoRef.current) {
+      videoRef.current.pause()
+    }
+  }
+
+  const handleNextVideo = () => {
+    setCurrentVideoIndex((prev) => (prev === videos.length - 1 ? 0 : prev + 1))
+    setIsPlaying(false)
+    if (videoRef.current) {
+      videoRef.current.pause()
     }
   }
 
@@ -97,6 +119,7 @@ export default function HomePage() {
               <div className="relative rounded-lg overflow-hidden shadow-2xl border-4 border-white/30">
                 <video
                   ref={videoRef}
+                  key={videos[currentVideoIndex].src}
                   className="w-full h-auto cursor-pointer"
                   loop
                   playsInline
@@ -104,7 +127,7 @@ export default function HomePage() {
                   muted
                   onClick={handleVideoClick}
                 >
-                  <source src="/video.mp4" type="video/mp4" />
+                  <source src={videos[currentVideoIndex].src} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 
@@ -132,6 +155,36 @@ export default function HomePage() {
                       <Volume2 className="w-5 h-5 text-white" />
                     )}
                   </button>
+                </div>
+
+                {/* Navigation Buttons */}
+                <div className="absolute inset-y-0 left-0 right-0 flex items-center justify-between px-4 pointer-events-none">
+                  <button
+                    onClick={handlePreviousVideo}
+                    className="pointer-events-auto p-3 bg-black/70 hover:bg-black/90 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100"
+                    aria-label="Previous video"
+                  >
+                    <ChevronLeft className="w-6 h-6 text-white" />
+                  </button>
+                  <button
+                    onClick={handleNextVideo}
+                    className="pointer-events-auto p-3 bg-black/70 hover:bg-black/90 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100"
+                    aria-label="Next video"
+                  >
+                    <ChevronRight className="w-6 h-6 text-white" />
+                  </button>
+                </div>
+
+                {/* Video Indicator */}
+                <div className="absolute top-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+                  {videos.map((_, index) => (
+                    <div
+                      key={index}
+                      className={`w-2 h-2 rounded-full transition-all ${
+                        index === currentVideoIndex ? 'bg-white w-8' : 'bg-white/50'
+                      }`}
+                    />
+                  ))}
                 </div>
               </div>
               {/* Decorative Elements */}

@@ -183,6 +183,21 @@ Detail pelaksanaan program dapat dilihat pada dokumen PDF yang terlampir.
     featured: false,
     image: "/ais2.jpeg",
   },
+  {
+    id: 9,
+    title: "Pengelolaan Limbah Peternakan Sapi Perah",
+    slug: "pengelolaan-limbah-peternakan-sapi-perah",
+    excerpt:
+      "Modul ini membahas pengelolaan limbah peternakan sapi perah yang meliputi identifikasi jenis limbah, metode pengelolaan, pemanfaatan limbah sebagai pupuk organik, serta dampak lingkungan dan kesehatan masyarakat.",
+    pdfUrl: "/Pengolahan.png",
+    content: `# Pengelolaan Limbah Peternakan Sapi Perah`,
+    author: "M. Kimi P.",
+    date: "5 Januari 2026",
+    readTime: "10 menit",
+    category: "Peternakan",
+    featured: false,
+    image: "/Pengolahan.png",
+  },
 ]
 
 export function getArticleBySlug(slug: string): Article | undefined {
