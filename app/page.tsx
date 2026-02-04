@@ -37,8 +37,9 @@ const featuredProducts = [
 
 export default function HomePage() {
   const videoRef = useRef<HTMLVideoElement>(null)
-  const [isPlaying, setIsPlaying] = useState(true)
-  const [isMuted, setIsMuted] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(false)
+  const [isMuted, setIsMuted] = useState(true)
+  const [showControls, setShowControls] = useState(false)
 
   const togglePlay = () => {
     if (videoRef.current) {
@@ -55,6 +56,16 @@ export default function HomePage() {
     if (videoRef.current) {
       videoRef.current.muted = !isMuted
       setIsMuted(!isMuted)
+    }
+  }
+
+  const handleVideoClick = () => {
+    setShowControls(!showControls)
+    // Auto-hide controls after 3 seconds on mobile
+    if (!showControls) {
+      setTimeout(() => {
+        setShowControls(false)
+      }, 3000)
     }
   }
 
@@ -86,19 +97,19 @@ export default function HomePage() {
               <div className="relative rounded-lg overflow-hidden shadow-2xl border-4 border-white/30">
                 <video
                   ref={videoRef}
-                  className="w-full h-auto"
-                  autoPlay
+                  className="w-full h-auto cursor-pointer"
                   loop
                   playsInline
                   preload="metadata"
-                  muted={false}
+                  muted
+                  onClick={handleVideoClick}
                 >
                   <source src="/video.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 
                 {/* Video Controls */}
-                <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                <div className={`absolute bottom-4 right-4 flex gap-2 transition-opacity duration-300 z-10 ${showControls ? 'opacity-100' : 'opacity-0'} md:opacity-0 md:group-hover:opacity-100`}>
                   <button
                     onClick={togglePlay}
                     className="p-3 bg-black/70 hover:bg-black/90 rounded-full backdrop-blur-sm transition-all"
@@ -169,12 +180,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/40 rounded-full flex items-start justify-center p-2">
-            <div className="w-1 h-3 bg-white/60 rounded-full" />
-          </div>
-        </div>
       </section>
 
       {/* Tentang Desa */}
