@@ -198,6 +198,36 @@ Detail pelaksanaan program dapat dilihat pada dokumen PDF yang terlampir.
     featured: false,
     image: "/Pengolahan.png",
   },
+  {
+    id: 10,
+    title: "Manfaat Susu Sapi Perah bagi Kesehatan",
+    slug: "manfaat-susu-sapi-perah-bagi-kesehatan",
+    excerpt:
+      "Modul ini membahas manfaat susu sapi perah bagi kesehatan yang meliputi kandungan nutrisi, efek positif pada sistem kekebalan tubuh, serta peranannya dalam pencegahan berbagai penyakit.",
+    pdfUrl: "/proker 1 - Farhan.pdf",
+    content: `# Manfaat Susu Sapi Perah bagi Kesehatan`,
+    author: "Farhan Akmal H.",
+    date: "5 Januari 2026",
+    readTime: "10 menit",
+    category: "Peternakan",
+    featured: false,
+    image: "/ManfaatSusu.png",
+  },
+  {
+    id: 11,
+    title: "Pengembangan Program Edu Agrowisata di Desa Girimulyo",
+    slug: "pengembangan-program-edu-agrowisata-di-desa-girimulyo",
+    excerpt:
+      "Modul ini membahas pengembangan program edu agrowisata di Desa Girimulyo yang meliputi konsep, implementasi, manfaat, serta dampak sosial dan ekonomi bagi masyarakat setempat.",
+    pdfUrl: "/Proker 1 - Jeremy.pdf",
+    content: `# Pengembangan Program Edu Agrowisata di Desa Girimulyo`,
+    author: "Jeremy Dharma E.",
+    date: "5 Januari 2026",
+    readTime: "10 menit",
+    category: "Peternakan",
+    featured: false,
+    image: "/EduAgrowisata.png",
+  },
 ]
 
 export function getArticleBySlug(slug: string): Article | undefined {

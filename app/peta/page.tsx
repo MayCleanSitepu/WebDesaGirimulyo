@@ -11,8 +11,8 @@ export default function PetaPage() {
       {/* Header */}
       <section className="bg-primary text-primary-foreground py-12">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Story Maps Desa Windusari</h1>
-          <p className="text-lg text-primary-foreground/90">Peta interaktif wilayah dan potensi Desa Windusari</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Story Maps Desa Girimulyo</h1>
+          <p className="text-lg text-primary-foreground/90">Peta interaktif wilayah dan potensi Desa Girimulyo</p>
         </div>
       </section>
 
@@ -23,7 +23,7 @@ export default function PetaPage() {
             <Info className="h-4 w-4" />
             <AlertTitle>Informasi Peta</AlertTitle>
             <AlertDescription>
-              Peta ini menampilkan batas wilayah Desa Windusari, potensi desa, lokasi fasilitas umum, dan informasi
+              Peta ini menampilkan batas wilayah Desa Girimulyo, potensi desa, lokasi fasilitas umum, dan informasi
               geografis lainnya. Gunakan kontrol pada peta untuk zoom in/out dan navigasi.
             </AlertDescription>
           </Alert>
@@ -54,11 +54,11 @@ export default function PetaPage() {
             <h2 className="text-3xl font-bold mb-6">Tentang Peta Desa</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Peta interaktif Desa Windusari ini menampilkan berbagai informasi geografis dan potensi desa secara
+                Peta interaktif Desa Girimulyo ini menampilkan berbagai informasi geografis dan potensi desa secara
                 visual dan mudah dipahami. Melalui peta ini, Anda dapat melihat:
               </p>
               <ul className="space-y-2 ml-6">
-                <li>• Batas wilayah administratif Desa Windusari</li>
+                <li>• Batas wilayah administratif Desa Girimulyo</li>
                 <li>• Lokasi fasilitas umum seperti balai desa, sekolah, dan puskesmas</li>
                 <li>• Sebaran lahan pertanian dan perkebunan</li>
                 <li>• Area UMKM dan pusat ekonomi desa</li>
@@ -67,7 +67,7 @@ export default function PetaPage() {
               </ul>
               <p>
                 Peta ini dibuat sebagai bagian dari program digitalisasi desa dan akan terus diperbarui seiring dengan
-                perkembangan Desa Windusari.
+                perkembangan Desa Girimulyo.
               </p>
             </div>
           </div>
