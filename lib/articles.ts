@@ -204,14 +204,14 @@ Detail pelaksanaan program dapat dilihat pada dokumen PDF yang terlampir.
     slug: "manfaat-susu-sapi-perah-bagi-kesehatan",
     excerpt:
       "Modul ini membahas manfaat susu sapi perah bagi kesehatan yang meliputi kandungan nutrisi, efek positif pada sistem kekebalan tubuh, serta peranannya dalam pencegahan berbagai penyakit.",
-    pdfUrl: "/proker 1 - Farhan.pdf",
+    pdfUrl: "/pdfs/proker 1 - Farhan.pdf",
     content: `# Manfaat Susu Sapi Perah bagi Kesehatan`,
     author: "Farhan Akmal H.",
     date: "5 Januari 2026",
     readTime: "10 menit",
     category: "Peternakan",
     featured: false,
-    image: "/ManfaatSusu.png",
+    image: "/farhan1.png",
   },
   {
     id: 11,
@@ -227,6 +227,36 @@ Detail pelaksanaan program dapat dilihat pada dokumen PDF yang terlampir.
     category: "Peternakan",
     featured: false,
     image: "/EduAgrowisata.png",
+  },
+  {
+    id: 12,
+    title: "Panduan alat kandang sapi perah higenis",
+    slug: "panduan-alat-kandang-sapi-perah-higenis",
+    excerpt:
+      "Modul ini membahas panduan alat kandang sapi perah higenis yang meliputi konsep, implementasi, manfaat, serta dampak sosial dan ekonomi bagi masyarakat setempat.",
+    pdfUrl: "/pdfs/Proker 2 - Farhan.pdf",
+    content: `# Panduan alat kandang sapi perah higenis`,
+    author: "Farhan Akmal H.",
+    date: "5 Januari 2026",
+    readTime: "10 menit",
+    category: "Peternakan",
+    featured: false,
+    image: "/farhan2.png",
+  },
+  {
+    id: 13,
+    title: "Poster Manfaat Susu Sapi",
+    slug: "poster-manfaat-susu-sapi",
+    excerpt:
+      "Modul ini membahas poster manfaat susu sapi perah yang meliputi konsep, implementasi, manfaat, serta dampak sosial dan ekonomi bagi masyarakat setempat.",
+    pdfUrl: "/pdfs/Proker 3 - Farhan.pdf",
+    content: `# Poster Manfaat Susu Sapi`,
+    author: "Farhan Akmal H.",
+    date: "5 Januari 2026",
+    readTime: "10 menit",
+    category: "Peternakan",
+    featured: false,
+    image: "/farhan1.png",
   },
 ]
 
